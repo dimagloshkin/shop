@@ -8,7 +8,13 @@
          <h3>Привет<?php echo ', ' . $user['name'];?> </h3>
          <ul>
             <li><a href="/cabinet/edit">Редактировать данные</a></li>
-            <li><a href="/cabinet/history">Список покупок</a></li>
+             <?php
+             if($user['role'] == 'admin'){
+             ?>
+            <li><a href="/admin/">Админпанель</a></li>
+            <?php
+             }
+            ?>
          </ul>
 
       </div>

@@ -9,7 +9,7 @@ class CatalogController
       $categories = Category::getCategoriesList();
 
       $LatestProduct = array();
-      $LatestProduct = Product::getLatestProduct(3);
+      $LatestProduct = Product::getLatestProduct(10);
 
 
       require_once ROOT . '/view/catalog/index.php';
